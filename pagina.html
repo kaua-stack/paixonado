@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História de Amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <div id="love-story">
+            <div class="music-player" data-aos="fade-up">
+                <div class="music-info">
+                    <img src="img/capa.jpg" alt="Capa da Música" style="width: 90px; margin-top: 5px; border-radius: 15px;">
+                    <div class="song-title">Lady Gaga, Bruno Mars <br>
+                        <p>die with a smile</p>
+                    </div>
+                </div>
+                <div class="music-controls">
+                    <button id="play-pause-btn" class="music-btn">
+                        <span id="play-icon">▶</span>
+                        <span id="pause-icon" class="hidden">❚❚</span>
+                    </button>
+                    <div class="volume-control">
+                        <span class="volume-icon">🔊</span>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+                    </div>
+                </div>
+            </div>
+            
+            <h2 data-aos="fade-down" style="left: 45px;">Nossos Momentos</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel" id="image-carousel">
+                    <div class="card"><img src="/img/1.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/2.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/3.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/4.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/5.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/7.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/8.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/9.jpeg" alt="Momento especial"></div>
+                    <!-- Duplicados para o efeito infinito -->
+                    <div class="card"><img src="/img/1.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/2.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/3.jpeg" alt="Momento especial"></div>
+                    <div class="card"><img src="/img/4.jpeg" alt="Momento especial"></div>
+                </div>
+            </div>
+
+            <div class="counter-section">
+                <h1 data-aos="fade-down">Jamille & Kauã ❤️</h1>
+                <h2 data-aos="fade-up">Juntos há</h2>
+                <div class="counter-container">
+                    <div class="counter-box" data-aos="zoom-in" data-aos-delay="100">
+                        <span id="years">0</span>
+                        <span class="counter-label">anos</span>
+                    </div>
+                    <div class="counter-box" data-aos="zoom-in" data-aos-delay="200">
+                        <span id="months">0</span>
+                        <span class="counter-label">meses</span>
+                    </div>
+                    <div class="counter-box" data-aos="zoom-in" data-aos-delay="300">
+                        <span id="days">0</span>
+                        <span class="counter-label">dias</span>
+                    </div>
+                    <div class="counter-box" data-aos="zoom-in" data-aos-delay="400">
+                        <span id="hours">0</span>
+                        <span class="counter-label">horas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <h2 data-aos="fade-down">Uma Mensagem Especial</h2>
+                <div class="message-box" data-aos="fade-up" data-aos-delay="200">
+                    <div id="message">
+                        <h1 style="font-weight: bold; color: var(--primary-color);">2 Anos de Amor</h1>
+                        <p>Dois anos já, meu bem! Parece que foi ontem que a gente se conheceu. Que bom que te encontrei, viu? Você é demais! A gente já passou por tanta coisa juntos, né? Risadas, momentos engraçados, noites aconchegantes no quarto assistindo filmes... tudo fica melhor com você do meu lado.</p>
+                        <p>Obrigado por ser essa pessoa incrível que me faz tão feliz. Te amo muito! Que venham muitos mais anos de bons momentos e amor!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="love-question-section">
+                <h2 data-aos="fade-down">Você me ama?</h2>
+                <div class="love-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <button id="no-btn" class="love-btn no-btn">Não</button>
+                    <button id="yes-btn" class="love-btn yes-btn">Sim</button>
+                </div>
+                <div id="love-response" class="love-response hidden">
+                    <div class="love-card">
+                        <div class="love-heart">❤️</div>
+                        <h3>Eu te amo Mais!</h3>
+                        <p>Você é o amor da minha vida!</p>
+                        <video id="love-video" src="WhatsApp Video 2025-03-26 at 15.36.00.mp4" width="250" controls></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="hearts-container"></div>
+    
+    <audio id="background-music" loop>
+        <source src="WhatsApp Audio 2025-03-18 at 14.05.56.mp4" type="audio/mp3">
+    </audio>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

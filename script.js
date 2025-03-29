@@ -6,26 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
     mirror: true,
   });
 
-  // Contador de tempo juntos - DATA CORRIGIDA: 2023-03-29
+   // Contador de tempo juntos - DATA CORRIGIDA: 2023-03-29
   const startDate = new Date("2023-03-29");
 
-  function updateCounter() {
+function updateCounter() {
     const now = new Date();
     const diff = now - startDate;
 
-    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-    const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
-    const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const totalMonths = Math.floor(totalDays / 30.44); // Média de dias por mês
+    const totalYears = Math.floor(totalMonths / 12);
+    const totalHours = totalDays * 24;
 
-    document.getElementById("years").textContent = years;
-    document.getElementById("months").textContent = months;
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-  }
+    document.getElementById("years").textContent = totalYears;
+    document.getElementById("months").textContent = totalMonths;
+    document.getElementById("days").textContent = totalDays;
+    document.getElementById("hours").textContent = totalHours;
+}
 
-  updateCounter();
-  setInterval(updateCounter, 60000); // Atualiza a cada minuto
+updateCounter();
+setInterval(updateCounter, 1000); // Atualiza a cada segundo
 
   // Player de música
   const audio = document.getElementById("background-music");

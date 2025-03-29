@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Contador de tempo juntos - DATA CORRIGIDA: 2023-03-29
-  const startDate = new Date("2023-03-31");
+  const startDate = new Date("2023-03-29");
 
   function updateCounter() {
     const now = new Date();
